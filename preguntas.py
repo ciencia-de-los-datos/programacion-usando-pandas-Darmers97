@@ -190,8 +190,9 @@ def pregunta_10():
     dataf = pd.DataFrame({'_c2': (tbl0.groupby('_c1')['_c2'])})
     dataf1 = pd.DataFrame({'_c1': dataf['_c2'].map(lambda x: x[0])})
     dataf2 = pd.DataFrame({'_c2': dataf['_c2'].map(lambda x: ':'.join(map(str, sorted(x[1]))))})
-
-    return pd.concat([dataf1, dataf2], axis=1)
+    datafinal = pd.concat([dataf1, dataf2], axis=1)
+    
+    return datafinal
 
 #print(pregunta_10())
 
