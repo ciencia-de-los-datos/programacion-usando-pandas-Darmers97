@@ -191,6 +191,7 @@ def pregunta_10():
     dataf1 = pd.DataFrame({'_c1': dataf['_c2'].map(lambda x: x[0])})
     dataf2 = pd.DataFrame({'_c2': dataf['_c2'].map(lambda x: ':'.join(map(str, sorted(x[1]))))})
     datafinal = pd.concat([dataf1, dataf2], axis=1)
+    datafinal.set_index('_c1', inplace = True)
     
     return datafinal
 
