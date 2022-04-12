@@ -24,7 +24,7 @@ def pregunta_01():
     """
     return len(tbl0.index)
 
-print(pregunta_01())
+#print(pregunta_01())
 
 
 def pregunta_02():
@@ -35,9 +35,10 @@ def pregunta_02():
     4
 
     """
-    return len(tbl0.columns)
+    cantidadcol = len(tbl0.columns)
+    return cantidadcol
 
-print(pregunta_02())
+#print(pregunta_02())
 
 
 def pregunta_03():
@@ -57,7 +58,7 @@ def pregunta_03():
 
     return tbl0['_c1'].value_counts().sort_index()
 
-print(pregunta_03())
+#print(pregunta_03())
 
 
 def pregunta_04():
@@ -76,7 +77,7 @@ def pregunta_04():
 
     return tbl0.groupby("_c1")["_c2"].mean()
 
-print(pregunta_04())
+#print(pregunta_04())
 
 
 def pregunta_05():
@@ -95,7 +96,7 @@ def pregunta_05():
     """
     return tbl0.groupby("_c1")["_c2"].max()
 
-print(pregunta_05())
+#print(pregunta_05())
 
 
 def pregunta_06():
@@ -109,7 +110,7 @@ def pregunta_06():
     """
     return sorted(tbl1['_c4'].str.upper().unique())
 
-print(pregunta_06())
+#print(pregunta_06())
 
 
 def pregunta_07():
@@ -127,7 +128,7 @@ def pregunta_07():
     """
     return tbl0.groupby("_c1")["_c2"].sum()
 
-print(pregunta_07())
+#print(pregunta_07())
 
 
 def pregunta_08():
@@ -148,7 +149,7 @@ def pregunta_08():
     
     return pd.concat([tbl0,pd.DataFrame({'suma': tbl0['_c0'] + tbl0['_c2']})],axis=1)
 
-print(pregunta_08())
+#print(pregunta_08())
 
 
 def pregunta_09():
@@ -169,7 +170,7 @@ def pregunta_09():
 
     return pd.concat([tbl0, pd.DataFrame({'year': tbl0["_c3"].map(lambda x: x[:4])})], axis=1)
 
-print(pregunta_09())
+#print(pregunta_09())
 
 
 def pregunta_10():
@@ -192,7 +193,7 @@ def pregunta_10():
 
     return pd.concat([dataf1, dataf2], axis=1)
 
-print(pregunta_10())
+#print(pregunta_10())
 
 
 def pregunta_11():
@@ -217,7 +218,7 @@ def pregunta_11():
 
     return pd.concat([dataf1, dataf2], axis=1)
 
-print(pregunta_11())
+#print(pregunta_11())
 
 
 def pregunta_12():
@@ -244,7 +245,7 @@ def pregunta_12():
 
     return pd.concat([datafx, datafy], axis=1)
 
-print(pregunta_12())
+#print(pregunta_12())
 
 
 def pregunta_13():
@@ -266,4 +267,4 @@ def pregunta_13():
     
     return tbl0.groupby('_c1')['_c5b'].sum()
 
-print(pregunta_13())
+#print(pregunta_13())
